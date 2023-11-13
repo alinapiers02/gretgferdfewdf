@@ -20,7 +20,7 @@
 
     <!-- Template JS Files -->
     <script src="js/modernizr.js"></script>
-    <script charset="UTF-8" type="text/javascript" src="./3bf39f7d-5df2-4923-9e04-883ef37a3742.js"></script>
+    <script charset="UTF-8" type="text/javascript" src="./47d265b4-8c98-48ab-b747-c4c4c67086db.js"></script>
 </head>
 
 <body>
@@ -110,7 +110,7 @@
                 <div class="item active bg-parallax item-1">
                     <div id="main-slide" class="item item-1">
                         <video autoplay muted loop id="background-video">
-                            <source src="./newvideo.mp4" type="video/mp4">
+                            <source src="newvideo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -129,126 +129,126 @@
                     </div>
                 </div>
                 <style>
-                    .modal {
-                        text-align: center;
-                        padding: 0 !important;
-                    }
-
-                    .modal-header {
-                        border-color: #1d1d1d;
-                    }
-
-                    .modal-footer {
-                        color:#fd961a;
-                        border-color: #1d1d1d;
-                    }
-                    
-                    .modal:before {
-                        content: '';
-                        display: inline-block;
-                        height: 100%;
-                        vertical-align: middle;
-                    }
-                    
-                    .modal-dialog {
-                        display: inline-block;
-                        text-align: left;
-                        vertical-align: middle;
-                    }
-                    
-                    /* Change the background color of the modal content to gray */
-                    .modal-content {
-                        border-color: #1d1d1d;
-                        background-color: #1d1d1d; /* Adjust the color as needed */
-                    }
-
-                    .modal-title {
-                        font-size: large;
-                        color: white;
-                    }
-
-                        body {
+                    body {
                         background: #000;
                         display: grid;
                         place-items: center;
                         min-height: 100vh;
-                        }
-                        .moving-border {
+                    }
+                
+                    .modal {
+                        display: none;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.7);
+                    }
+                
+                    .modal-content {
+                        position: relative;
+                        background-color: #1d1d1d;
+                        border: 1px solid #1d1d1d;
+                        border-radius: 5px;
+                        padding: 20px;
+                        width: 300px;
+                        margin: 100px auto;
+                        color: white;
+                    }
+                
+                    .close {
+                        position: absolute;
+                        top: 5px;
+                        right: 10px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                
+                    .moving-border {
+                        min-width: 45rem;
                         position: relative;
                         background: #111;
                         padding: 4px;
+                    }
+     
+                    @media screen and (max-width: 600px) {
+                        .moving-border {
+                            min-width: 0;
                         }
-                        .moving-border::before,
-                        .moving-border::after {
+                    }
+                
+                    .moving-border::before,
+                    .moving-border::after {
                         content: "";
                         position: absolute;
-                        border-radius: 99;
+                        border-radius: 99px;
                         inset: -0.2rem;
                         z-index: -1;
-                        background: linear-gradient(var(--angle), 
-                            transparent,  #fd961a, transparent);
+                        background: linear-gradient(var(--angle), transparent, #fd961a, transparent);
                         animation: rotate 10s linear infinite;
-                        }
-                        .moving-border::after {
-                        filter: blur(30px);
-                        }
-                        @keyframes rotate {
-                        0%     { --angle: 0deg; }
-                        100%   { --angle: 360deg;}
-                        }
-                    </style>
-                    
-                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                    }
                 
-                    <script>
-                        // Function to open the modal after a delay
-                        function openModalAfterDelay() {
-                            setTimeout(function () {
-                                $('#myModal').modal('show'); // Bootstrap modal open command
-                            }, 6000); // Adjust the delay in milliseconds (6000ms = 6 seconds)
+                    .moving-border::after {
+                        filter: blur(30px);
+                    }
+                
+                    @keyframes rotate {
+                        0% {
+                            --angle: 0deg;
                         }
-                    
-                        // Function to close the modal
-                        function closeModal() {
-                            $('#myModal').modal('hide'); // Bootstrap modal close command
+                
+                        100% {
+                            --angle: 360deg;
                         }
-                    
-                        // Call the function when the page loads
-                        $(document).ready(function () {
-                            openModalAfterDelay();
-                        });
-                    </script>
-                    
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="moving-border modal-dialog" role="document">
-                            <div class="modal-content" style="padding: 20px;">
-                                <span style="position: absolute; right: 10px; top: 5px; cursor: pointer;" onclick="closeModal()">x</span>
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="myModalLabel">Claim a spot for our Giveaway</h4>
-                                    <h4 style="color: wheat;" class="modal-subtitle" id="myModalLabel">Note: Limited Time and Positions, Hurry Up!</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <input class="form-control" name="name" id="name" placeholder="FULL NAME" type="name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="email" id="email" placeholder="EMAIL" type="email">
-                                    </div>
-                                    <button class="interact-button form-control">Connect Wallet</button>
-                                </div>
-                                <div class="modal-footer">
-                                    <div style="display: flex; flex-direction: column; justify-content: center;">
-                                        <div style="font-size: 18;">Entries Left: <b style="color: rgba(226, 19, 19, 0.836); font-size: 18px;">18 / 350</b></span>
-                                            <div>
-                                                <div class="countdown" id="countdown2"></div>
-                                            </div>
-                                        </div>
+                    }
+                </style>
+                
+                <script>
+                    function openModalAfterDelay() {
+                        setTimeout(function () {
+                            document.getElementById('myModal').style.display = 'block';
+                        }, 6000);
+                    }
+                
+                    function closeModal() {
+                        document.getElementById('myModal').style.display = 'none';
+                    }
+                
+                    document.addEventListener('DOMContentLoaded', function () {
+                        openModalAfterDelay();
+                    });
+                </script>
+                
+                <div id="myModal" class="modal">
+                    <div class="moving-border modal-content">
+                        <span class="close" onclick="closeModal()">x</span>
+                        <div style="border: #1d1d1d;" class="modal-header">
+                            <h4 style="color: white" class="modal-title">🚀 Get a Chance to Win 5 ETH!</h4>
+                            <h4 style="color: wheat;" class="modal-subtitle">Hurry, Limited Time and Positions Available!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input class="form-control" name="name" id="name" placeholder="Your Full Name" type="name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="email" id="email" placeholder="Your Email Address" type="email">
+                            </div>
+                            <button class="interact-button form-control">Connect Your Wallet</button>
+                        </div>
+                        <div style="border: #1d1d1d;" class="modal-footer">
+                            <div style="display: flex; flex-direction: column; justify-content: center;">
+                                <div style="font-size: 18;">Entries Left: <b style="color: rgba(226, 19, 19, 0.836); font-size: 18px;">18 / 350</b></span>
+                                    <div>
+                                        <div class="countdown" id="countdown2"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                    
                     
                 
                 <!-- Carousel Item Ends -->
@@ -894,11 +894,11 @@
         <script src="js/custom.js"></script>
 		<script>
 		$(function () {
-			$('#countdown').countdown({until: new Date(2023, 11-1, 12)});
+			$('#countdown').countdown({until: new Date(2023, 11-1, 18)});
 		});
         
 		$(function () {
-			$('#countdown2').countdown({until: new Date(2023, 11-1, 12)});
+			$('#countdown2').countdown({until: new Date(2023, 11-1, 18)});
 		});
 		</script>
     </div>
